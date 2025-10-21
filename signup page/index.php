@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://kit.fontawesome.com/39c5fdd9a0.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1 class="text-2xl font-thin capitalize">sign up</h1>
+        <form action="#" method="post">
+             <div class="my-3">
+             <label for="name" class="text-xl font-thin capitalize">name</label><br>
+            <input type="text" id="name" name="name" placeholder="input your name"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-60'>
+            <br>
+        </div>
+         <div class="my-3">
+             <label for="email" class="text-xl font-thin capitalize">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="input your email"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-60'>
+            <br>
+        </div>
+         <div class="my-3">
+             <label for="password" class="text-xl font-thin capitalize">password</label><br>
+            <input type="password" id="password" name="password" placeholder="input your password"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-60'>
+            <br>
+        </div>
+        <div class="my-3">
+             <label for="confirm password" class="text-xl font-thin capitalize">confirm password</label><br>
+            <input type="password" id="confrim password" name="confirm password" placeholder="confirm the  password inputed"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-60'>
+            <br>
+        </div>
+        <div class="flex justify-center items-center">
+        <input type ='submit' value="sign up" class="border-1 my-3 py-1 px-2 rounded-xl bg-[#FEB21A] capitalize text-base font-thin">
+        </div>
+
+        </form>
+    </div>
+</body>
+</html>
