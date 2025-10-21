@@ -42,8 +42,9 @@
         <input type="email" id="email" name="email" placeholder="email"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-100'>
         <br>
         </div>
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center gap-10">
             <input type ='submit' value="record" class="border-1 my-3 py-1 px-2 rounded-xl bg-[#FEB21A] capitalize text-base font-thin">
+            <button class="border-1 my-3 py-1 px-2 rounded-xl bg-[#FEB21A] capitalize text-base font-thin"><a href="../students.php">Student list</a></button>
         </div>
     </form>
     </div></div> 
