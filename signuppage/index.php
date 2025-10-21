@@ -10,28 +10,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div>
-        <h1 class="text-2xl font-thin capitalize">sign up</h1>
-        <form action="#" method="post">
+<body class='bg-[#FFF4A4] flex justify-center mt-20 text-[#8C1007]'>
+    <div class='bg-[#FED16A] py-5 px-10 rounded-2xl border-2 border-[#F97A00]'>
+        <h1 class="text-2xl font-thin capitalize text-center">sign up</h1>
+        <form action="includes/process_signup.php" method="post">
              <div class="my-3">
              <label for="name" class="text-xl font-thin capitalize">name</label><br>
-            <input type="text" id="name" name="name" placeholder="input your name"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-60'>
+            <input type="text" id="name" name="name" placeholder="input your name"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-100'>
             <br>
         </div>
          <div class="my-3">
              <label for="email" class="text-xl font-thin capitalize">Email</label><br>
-            <input type="email" id="email" name="email" placeholder="input your email"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-60'>
+            <input type="email" id="email" name="email" placeholder="input your email"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-100'>
             <br>
         </div>
          <div class="my-3">
              <label for="password" class="text-xl font-thin capitalize">password</label><br>
-            <input type="password" id="password" name="password" placeholder="input your password"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-60'>
+            <input type="password" id="password" name="password" placeholder="input your password"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-100'>
             <br>
         </div>
         <div class="my-3">
-             <label for="confirm password" class="text-xl font-thin capitalize">confirm password</label><br>
-            <input type="password" id="confrim password" name="confirm password" placeholder="confirm the  password inputed"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-60'>
+             <label for="confirm_password" class="text-xl font-thin capitalize">Confirm Password</label><br>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="confirm the  password inputed"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-100'>
             <br>
         </div>
         <div class="flex justify-center items-center">
