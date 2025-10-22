@@ -13,7 +13,7 @@
 <body class='bg-[#FFF4A4] flex justify-center mt-20 text-[#8C1007]'>
     <div class='bg-[#FED16A] py-5 px-10 rounded-2xl border-2 border-[#F97A00]'>
         <h1 class="text-2xl font-thin capitalize text-center">sign up</h1>
-        <form action="includes/process_signup.php" method="post">
+        <form action="process_signup.php" method="post">
              <div class="my-3">
              <label for="name" class="text-xl font-thin capitalize">name</label><br>
             <input type="text" id="name" name="name" placeholder="input your name"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-100'>
