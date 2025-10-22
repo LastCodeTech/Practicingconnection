@@ -6,10 +6,13 @@ $password = htmlspecialchars($_POST['password']);
 $confirm_password = htmlspecialchars($_POST['confirm_password']);
 
  require_once('server.php');
- 
+
+
+ $securedPassword = password_hash($password, PASSWORD_DEFAULT);
+
     $query = 'INSERT INTO users(name,email,password) VALUES(?,?,?);';
     $prep = $pdo->prepare($query);
-    $insert = $prep->execute([$name,$email,$password]);
+    $insert = $prep->execute([$name,$email,$securedPassword]);
     if($insert){
         echo'registered successfully';
     }
