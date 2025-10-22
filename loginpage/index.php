@@ -12,22 +12,22 @@
 </head>
 <body class='bg-[#3338A0] flex justify-center mt-20 text-[#8C1007]'>
     <div class='bg-[#FFE100] py-5 px-10 rounded-2xl border-2 border-[#8C1007]'>
-        <h1 class="text-2xl font-thin capitalize text-center">log in</h1>
+        <h1 class="text-3xl font-bold capitalize text-center">log in</h1>
         <form action="process.php" method="post">
            
          <div class="my-3">
-             <label for="email" class="text-xl font-thin capitalize">Email</label><br>
+             <label for="email" class="text-xl font-semi-bold capitalize">Email</label><br>
             <input type="email" id="email" name="email" placeholder="input your email"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-100'>
             <br>
         </div>
          <div class="my-3">
-             <label for="password" class="text-xl font-thin capitalize">password</label><br>
+             <label for="password" class="text-xl font-semi-bold capitalize">password</label><br>
             <input type="password" id="password" name="password" placeholder="input your password"class='mt-1  border-1 h-10 rounded-xl outline-none text-base px-5 w-100'>
             <br>
         </div>
      
         <div class="flex justify-center items-center">
-        <input type ='submit' value="Login" class="border-1 my-3 py-1 px-2 rounded-xl bg-[#FEB21A] capitalize text-base font-thin">
+        <input type ='submit' value="Login" class="border-1 my-3 py-1 px-2 rounded-xl bg-[#FEB21A] capitalize text-base font-semi-bold">
         </div>
 
         </form>
