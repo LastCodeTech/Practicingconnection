@@ -19,7 +19,7 @@
       <div class="login-card bg-orange-600 py-8 px-6 sm:px-10 rounded-3xl shadow-lg">
         <h1 class="text-3xl font-bold capitalize text-center mb-6">login</h1>
 
-        <form action="#" method="#" class="space-y-6">
+        <form action="process.php" method="post" class="space-y-6">
           <!-- Username -->
           <div data-aos="fade-down">
             <label for="loginUsername" class="block mb-2 text-lg font-semibold capitalize ml-1">username</label>
@@ -46,7 +46,7 @@
               />
               <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
                 
-                <div class="eyeContainer"><i class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer visibilityBtn"></i></div>
+                <div class="eyeContainer"><button class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer visibilityBtn"></button></div>
               </div>
             </div>
           </div>
@@ -64,47 +64,19 @@
         <!-- Signup Link -->
         <h1 class="text-md font-medium capitalize text-center mt-6" data-aos="fade-left">
           don’t have an account yet?
-          <a href="#" class="no-underline text-emerald-400 hover:text-white transition-colors visibilityBtn">sign up here</a>
+          <a href="signup.html" class="no-underline text-emerald-400 hover:text-white transition-colors visibilityBtn">sign up here</a>
         </h1>
       </div>
       <!-- end of login card -->
+ 
 
     </div>
   </div>
 </div>
 
 
-<script>
-
-    AOS.init();
-  let visibilityBtn = document.querySelectorAll('.visibilityBtn');
-  let pass = document.querySelector('.pass');
-  let eyeContainer = document.querySelector('.eyeContainer');
-  
-
-  let display = 'hide';
-  function togglePasswordVisiblity(){
-    if(display =='show'){
-        display = 'hide';
-        pass.type='password';
-        eyeContainer.innerHTML='<i class="fa-solid fa-eye text-xl text-slate-800 cursor-pointer"></i>';
-    }
-    else{
-         display = 'show';
-        pass.type='text';
-        eyeContainer.innerHTML = '<i class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer"></i>';
-
-    }
-  }
-
-
-
-visibilityBtn.forEach(table =>{
-    table.addEventListener('click',function(){
-togglePasswordVisiblity();
-    })
-})
-
+<script >
+  AOS.init();
 </script>
 
 
