@@ -19,7 +19,7 @@
       <div class="login-card bg-orange-600 py-8 px-6 sm:px-10 rounded-3xl shadow-lg">
         <h1 class="text-3xl font-bold capitalize text-center mb-6">login</h1>
 
-        <form action="process.php" method="post" class="space-y-6">
+        <form action="loginProcess.php" method="post" class="space-y-6">
           <!-- Username -->
           <div data-aos="fade-down">
             <label for="loginUsername" class="block mb-2 text-lg font-semibold capitalize ml-1">username</label>

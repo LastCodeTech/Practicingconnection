@@ -3,20 +3,25 @@ include_once('server.php');
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $loginUname = htmlspecialchars($_POST['loginUsername']);
     $loginPassword = htmlspecialchars($_POST['loginPassword']);
-    $signupUname = htmlspecialchars($_POST['signupUsername']);
-    $signupPassword = htmlspecialchars($_POST['signupPassword']);
-    $signupConfirmPassword = htmlspecialchars($_POST['signupConfirmPassword']);
+  
 
-    // if(!empty($loginUname) && !empty($loginPassword) && !empty($signupUname) && !empty( $signupPassword) && !empty($signupConfirmPassword)){
-    //     $query = 'SELECT * FROM users where name = ?';
-    //     $prep = pdo->prepare($query);
-    //     $insert ->execute('');
+    if(!empty($loginUname) && !empty($loginPassword)){
+        $query = 'SELECT * FROM accounts where username = ?';
+        $prep = $pdo->prepare($query);
+        $prep ->execute([$loginUname]);
+        $result = $prep->fetchAll(PDO::FETCH_ASSOC);
+        if(empty($result)){
+           echo 'we could not find any account related to the inputed credentials please sign up';
+        }
+        else{
+             echo 'ure are now logged in';
+        }
 
-    // }
-    // else{
-    //     echo'pls input all fields';
-    // }
-    echo 'hi';
+    }
+    else{
+        echo'pls input all fields';
+    }
+    
   
 
 
