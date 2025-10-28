@@ -64,7 +64,7 @@
         <!-- Signup Link -->
         <h1 class="text-md font-medium capitalize text-center mt-6" data-aos="fade-left">
           don’t have an account yet?
-          <a href="signup.html" class="no-underline text-emerald-400 hover:text-white transition-colors visibilityBtn">sign up here</a>
+          <a href="signup.php" class="no-underline text-emerald-400 hover:text-white transition-colors visibilityBtn">sign up here</a>
         </h1>
       </div>
       <!-- end of login card -->

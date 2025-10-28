@@ -1,12 +1,12 @@
 <?php
 $dbhandle = 'mysql:host=localhost;dbname=practicedb';
-$password = '';
+$password ='';
 $uname = 'root';
 
 try{
-    $pdo = ($dbhandle,$password,$uname);
-    $pdo setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    $pdo =new PDO ($dbhandle,$password,$uname);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $e){
 echo 'an error occured'.$e->getMessage();
-}
+};
