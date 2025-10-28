@@ -12,11 +12,12 @@
 <body class='bg-gray-100'>
             <h1 class="py-8 text-center  text-base md:text-xl capitalize font-semi-bold">task added here will be shown on the home page</h1>
     <div class="flex flex-col justify-center items-center mt-20">
+        <input type='text' class='h-10 w-80 md:w-120 border-1 mb-5 rounded-2xl'>
         <textarea class="mx-10 bg-white border-1 border-gray-400 outline-none h-50 w-80 md:w-120 rounded-2xl px-3 py-3 text-base md:text-xl text-gray-700 font-thin">
         </textarea>
         <div class="flex gap-10 items-center">
-        <button id="addbtn" class=" my-5 border-1 rounded-xl bg-[#78C841] text-white font-semi-bold hover:bg-[#B4E50D] text-base py-1 px-2 md:text-xl capitalize "><a href='#'>add</a></button>
-        <button id="backHome" class="hidden my-5 border-1 rounded-xl bg-[#FB4141] text-white font-semi-bold hover:bg-[#FF9B2F] text-base py-1 px-2 md:text-xl capitalize "><a href='index.html'>back to home</a></button>
+        <button id="addbtn" class=" my-5 border-1 rounded-xl bg-[#78C841] text-white font-semi-bold hover:bg-[#B4E50D] text-base py-1 px-2 md:text-xl capitalize "><a href='create.php'>add</a></button>
+        <button id="backHome" class=" my-5 border-1 rounded-xl bg-[#FB4141] text-white font-semi-bold hover:bg-[#FF9B2F] text-base py-1 px-2 md:text-xl capitalize "><a href='index.php'>back to home</a></button>
         </div>
     </div>
 
