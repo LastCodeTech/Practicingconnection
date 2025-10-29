@@ -57,7 +57,7 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
                <div id="insertedHere">
-        <div class="bg-white flex gap-5 py-2 px-3 rounded-2xl md:gap-10 items-center mx-5 my-3">
+        <div class="bg-white flex  gap-5 py-2 px-3 rounded-2xl md:gap-10 items-center mx-5 my-3">
           <div class="flex items-center">
             <input type="checkbox"
               class="appearance-none w-5 h-5 md:h-8 md:w-8 border-2 border-gray-400 rounded-md bg-white checked:bg-blue-600 checked:border-transparent peer" />
