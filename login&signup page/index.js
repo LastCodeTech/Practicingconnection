@@ -1,44 +1,27 @@
 
 
     AOS.init();
-  let visibilityBtn = document.querySelectorAll('.visibilityBtn');
-  let pass = document.querySelector('.pass');
-  let eyeContainer = document.querySelector('.eyeContainer');
-  
-
   let display = 'hide';
-  function togglePasswordVisiblity(){
+  function togglePasswordVisibility(passwordElement, eyeElement){ 
     if(display =='show'){
+        passwordElement.type='password';
+        eyeElement.innerHTML='<i class="fa-solid fa-eye text-xl text-slate-800 cursor-pointer"></i>';
         display = 'hide';
-        pass.type='password';
-        eyeContainer.innerHTML='<button class="fa-solid fa-eye text-xl text-slate-800 cursor-pointer"></button>';
     }
     else{
-         display = 'show';
-        pass.type='text';
-        eyeContainer.innerHTML = '<button class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer"></button>';
-
+        passwordElement.type='text';
+        eyeElement.innerHTML = '<i class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer"></i>';
+        display = 'show';
     }
   }
+let  btns = document.querySelectorAll('.eyeContainer');
+for(let i = 0; i < btns.length; i++){
+  btns[i].addEventListener('click', function(){
+    let thisEyeContainer = this;
+    let theMainDiv = thisEyeContainer.parentNode.parentNode;
+    let siblingPassword = theMainDiv.querySelector(".pass");
+    togglePasswordVisibility(siblingPassword, thisEyeContainer);
+  });
+}
 
 
-
-// visibilityBtn.forEach(table =>{
-//     table.addEventListener('click',function(){
-// togglePasswordVisiblity();
-// console.log('hi')
-//     })
-// })
-
-
-// for (let btn of btns) {
-//     btn.addEventListener('click', () => {
-//         console.log('hi');
-//     });
-// }
-let  btns = document.getElementsByTagName('button');
-Array.from(btns).forEach(btn => {
-    btn.addEventListener('click',function(){
- console.log('hi');
-    })
-});

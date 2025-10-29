@@ -39,7 +39,7 @@
             <label for="signupPassword" class="block mb-2 text-lg font-semibold capitalize ml-1">password</label>
             <div class="relative">
               <input
-              
+               
                 type="password"
                 id="signupPassword"
                 name="signupPassword"
@@ -48,7 +48,7 @@
               />
               <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
                 
-                <div class="eyeContainer"><button class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer visibilityBtn"></button></div>
+                <div class="eyeContainer"><i class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer visibilityBtn"></i></div>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@
               />
               <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
                 
-                <div class="eyeContainer"><button class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer visibilityBtn"></button></div>
+                <div class="eyeContainer"><i class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer visibilityBtn"></i></div>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@
         <!-- sign in Link -->
       <h1 class="text-md font-medium capitalize text-center mt-6 " data-aos="">
           already have an account ?
-          <a href="login.php" class="no-underline text-emerald-400 hover:text-white transition-colors ">login up here</a>
+          <a href="login.php" class="no-underline text-emerald-400 hover:text-white transition-colors ">login here</a>
         </h1>
       </div>
 
@@ -92,8 +92,8 @@
   </div>
 </div>
 
-<script>
-    AOS.init();
+<script src='index.js'>
+    
 </script>
 
 

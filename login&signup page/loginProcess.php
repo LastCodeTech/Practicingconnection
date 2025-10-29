@@ -6,6 +6,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
   
 
     if(!empty($loginUname) && !empty($loginPassword)){
+        
         $query = 'SELECT * FROM accounts where username = ?';
         $prep = $pdo->prepare($query);
         $prep ->execute([$loginUname]);
@@ -14,7 +15,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
            echo 'we could not find any account related to the inputed credentials please sign up';
         }
         else{
-             echo 'ure are now logged in';
+            //  print_r($result);
+             $registered_password= $result[0]['password'];
+             if(password_verify($loginPassword,$registered_password)){
+                echo'ure now logged in';
+             }
+             else{
+                echo'incorrect username or password';
+             }
         }
 
     }

@@ -46,7 +46,7 @@
               />
               <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
                 
-                <div class="eyeContainer"><button class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer visibilityBtn"></button></div>
+                <div class="eyeContainer"><i class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer visibilityBtn"></i></div>
               </div>
             </div>
           </div>
@@ -75,8 +75,8 @@
 </div>
 
 
-<script >
-  AOS.init();
+<script src='index.js'>
+  
 </script>
 
 
