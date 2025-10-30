@@ -57,8 +57,10 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
                <div id="insertedHere">
-        <div class="bg-white flex  gap-5 py-2 px-3 rounded-2xl md:gap-10 items-center mx-5 my-3">
-          <div class="flex items-center">
+        <div class="bg-white flex justify-between gap-5 py-2 px-3 rounded-2xl md:gap-10 items-center mx-5 my-3">
+          <div class='flex items-center gap-10'>
+          <div class="flex items-center ">
+            
             <input type="checkbox"
               class="appearance-none w-5 h-5 md:h-8 md:w-8 border-2 border-gray-400 rounded-md bg-white checked:bg-blue-600 checked:border-transparent peer" />
             <svg class="absolute w-4 h-4 md:h-7 md:w-7 text-white pointer-events-none hidden peer-checked:block"
@@ -72,10 +74,10 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
            
            <p> <?php echo $description; ?></p>
             </div>
-
-          <a href="edit.php?item=<?php echo $id;?>" class="font-bold text-white bg-blue-400 py-1 px-3">Edit</a>
+            </div>
+          <div><a href="edit.php?item=<?php echo $id;?>" class="font-bold text-white bg-blue-400 py-1 px-3 text-xl rounded-xl">Edit</a>
           <button
-            class="deleteBtn border-1 rounded-xl bg-[#FB4141] text-white font-semi-bold hover:bg-[#FF9B2F] text-base py-1 px-2 md:text-xl capitalize">Delete</button>
+            class="deleteBtn border-1 rounded-xl bg-[#FB4141] text-white font-semi-bold hover:bg-[#FF9B2F] text-base py-1 px-2 md:text-xl capitalize">Delete</button></div>
         </div>
       </div>
 

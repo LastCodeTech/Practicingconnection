@@ -4,8 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/39c5fdd9a0.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        #grid-wrapper{
+            display:grid;
+            grid-template-rows:1fr 1fr;
+            grid-template-columns:1fr 1fr 1fr;
+            gap:25px;
+            margin-top:30px;
+            margin-left:50px;
+            margin-right:50px;
+        }
+        body{
+             background-color: #fff;
+        }
+        .box{
+            background-color:rgb(253, 248, 248);
+            text-align: center;
+            border-radius:20px;
+            padding:15px 20px;
+            border:1px solid rgb(209, 209, 209);
+            box-shadow:1px 1px #ccc;
+        }
+        .icon{
+            font-size:3rem;
+            color:blueviolet;
+        }
+        .heading{
+            font-size:1.5rem;
+            font-weight: bolder;
+            text-transform: capitalize;
+            margin:13px 0px;
+        }
+        .paragraph{
+            font-size:1rem;
+            font-weight:lighter;
+            
+            margin:13px 0px;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- this is the main wrapper -->
+     <div id="main-wrapper">
+        <div id="grid-wrapper">
+            <div class="box one">
+                <em class="fa-solid fa-lightbulb icon"></em>
+                <h3 class="heading">innovative technology</h3>
+                <p class="paragraph">Lorem ipsum dolor sit aquam maiores asperiores qui vitae necessitatibus accusamus deleniti? Dicta pariatur quibusdam maxime exercitationem corrupti id ea, ipsam dignissimos.</p>
+            </div>
+             <div class="box one">
+               <em class="fa-solid fa-headset icon"></em>
+                <h3 class="heading">innovative technology</h3>
+                <p class="paragraph">Lorem ipsum dolor sit aquam maiores asperiores qui vitae necessitatibus accusamus deleniti? Dicta pariatur quibusdam maxime exercitationem corrupti id ea, ipsam dignissimos.</p>
+            </div>
+             <div class="box one">
+                <em class="fa-solid fa-shield-halved icon"></em>
+                <h3 class="heading">innovative technology</h3>
+                <p class="paragraph">Lorem ipsum dolor sit aquam maiores asperiores qui vitae necessitatibus accusamus deleniti? Dicta pariatur quibusdam maxime exercitationem corrupti id ea, ipsam dignissimos.</p>
+            </div>
+             <div class="box one">
+                <em class="fa-solid fa-chart-simple icon"></em>
+                <h3 class="heading">innovative technology</h3>
+                <p class="paragraph">Lorem ipsum dolor sit aquam maiores asperiores qui vitae necessitatibus accusamus deleniti? Dicta pariatur quibusdam maxime exercitationem corrupti id ea, ipsam dignissimos.</p>
+            </div>
+             <div class="box one">
+                <em class="fa-solid fa-cloud icon"></em>
+                <h3 class="heading">innovative technology</h3>
+                <p class="paragraph">Lorem ipsum dolor sit aquam maiores asperiores qui vitae necessitatibus accusamus deleniti? Dicta pariatur quibusdam maxime exercitationem corrupti id ea, ipsam dignissimos.</p>
+            </div>
+             <div class="box one">
+                <em class="fa-solid fa-chart-pie icon"></em>
+                <h3 class="heading">innovative technology</h3>
+                <p class="paragraph">Lorem ipsum dolor sit aquam maiores asperiores qui vitae necessitatibus accusamus deleniti? Dicta pariatur quibusdam maxime exercitationem corrupti id ea, ipsam dignissimos.</p>
+            </div>
+        </div>
+     </div>
 </body>
 </html>
