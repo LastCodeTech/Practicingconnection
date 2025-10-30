@@ -1,3 +1,8 @@
+
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +37,15 @@
               placeholder="username"
               class="w-full text-base font-medium bg-yellow-200 outline-none h-11 rounded-2xl px-5 text-slate-950 focus:ring-2 focus:ring-emerald-400 transition"
             />
+            <?php
+              if(isset($_SESSION['used_username'])){
+                ?>
+                <div class="bg-white text-red-600 p-1"><?php echo $_SESSION['used_username'];?></div>
+                <?php
+
+                unset($_SESSION['used_username']);
+              }
+            ?>
           </div>
 
           <!-- Password -->
@@ -69,6 +83,15 @@
                 <div class="eyeContainer"><i class="fa-solid fa-eye-slash text-xl text-slate-800 cursor-pointer visibilityBtn"></i></div>
               </div>
             </div>
+            <?php
+              if(isset($_SESSION['not_matching'])){
+                ?>
+                <div class="bg-white text-red-600 p-1"><?php echo $_SESSION['not_matching'];?></div>
+                <?php
+
+                unset($_SESSION['not_matching']);
+              }
+            ?>
           </div>
 
           <!-- Submit Button -->

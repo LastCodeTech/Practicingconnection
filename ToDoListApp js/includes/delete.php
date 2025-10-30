@@ -3,16 +3,15 @@ session_start();
 
   require_once('config.php');
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $title = htmlspecialchars($_POST['title']);
-    $description = htmlspecialchars($_POST['description']);
+
     $itemId = htmlspecialchars($_POST['itemId']);
   
-    $query =$pdo->prepare('UPDATE tasks SET title = ?, description = ? where id = ?;');
-    $insert =$query->execute([$title,$description,$itemId]);
+    $query =$pdo->prepare('DELETE FROM tasks WHERE id = ?;');
+    $delete =$query->execute([$itemId]);
    
     
-    if($insert){
-        $_SESSION['success'] = 'updated successfully';
+    if($delete){
+        $_SESSION['success'] = 'Deleted successfully';
 
 
         header("Location: ../index.php");

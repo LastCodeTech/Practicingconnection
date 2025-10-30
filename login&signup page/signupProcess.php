@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $username = htmlspecialchars($_POST['signupUsername']);
     $Password = htmlspecialchars($_POST['signupPassword']);
@@ -17,22 +19,47 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $prepare =$pdo->prepare($beans);
                 $insert = $prepare->execute([$username,$encrypted_password]);
                 if($insert){
-                    echo'registered successfully !!!';
+                $_SESSION['success']  = 'registered successfully !!!';
+
+
+                // Now Log them in - get their details, especially their id, so that you can use it to fetch their details
+                // in the dashboard page
+
+                // $fetchUserDetails = $pdo->prepare("SELECT * FROM accounts WHERE username = ?");
+                // $fetchUserDetails->execute([$username]);
+                // $userDetails = $fetchUserDetails->fetchAll(PDO::FETCH_ASSOC);
+
+                // $_SESSION['auth_id'] = $userDetails[0]['id'];
+                // $_SESSION['auth_username'] = $userDetails[0]['username'];
+                // $_SESSION['auth_created_at'] = $userDetails[0]['created_at'];
+
+                header("Location:../loginPage.dashboard.php");
+                exit();
                 }
                 else{
-                    echo'an error occured';
+                $_SESSION['error']  = 'An error occurred!';
+                header("Location:signup.php");
+                exit();
                 }
             }
             else{
-                echo 'sorry the username has been used by another user';
+                $_SESSION['used_username']  = 'sorry the username has been used by another user';
+                header("Location:signup.php");
+                exit();
             }
         }
         else{
-            echo 'password and confirm password are not matching';
+            
+              $_SESSION['not_matching']  = 'password and confirm password are not matching';
+                header("Location:signup.php");
+                exit();
         }
     }
     else{
-        echo 'please input all fields in order to signup';
+        
+        $_SESSION['empty_fields']  = 'please input all fields in order to signup';
+                header("Location:signup.php");
+                exit();
     }
 }
 else{

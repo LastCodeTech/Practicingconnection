@@ -31,8 +31,9 @@ require_once('includes/config.php');
 </head>
 <body class='bg-gray-100'>
             <h1 class="py-8 text-center  text-base md:text-xl capitalize font-semi-bold">task added here will be shown on the home page</h1>
-   <form action="includes/addTask.php" method="POST">
+   <form action="includes/updateTask.php" method="POST">
      <div class="flex flex-col justify-center items-center mt-20">
+        <input type="hidden" name="itemId" value="<?php echo $itemId?>">
         <input name="title" type='text' value="<?php echo $result[0]['title']?>" class='p-3 bg-white border-1 border-gray-400 outline-none h-10 w-80 md:w-120 border-1 mb-5 rounded-2xl text-gray-700 font-bold'>
         <textarea name="description" class="mx-10 bg-white border-1 border-gray-400 outline-none h-50 w-80 md:w-120 rounded-2xl px-3 py-3 text-base md:text-xl text-gray-700 font-semi-bold"><?php echo $result[0]['description']?></textarea>
         <div class="flex gap-10 items-center">

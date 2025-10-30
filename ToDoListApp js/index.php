@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('includes/config.php');
 
 
@@ -37,8 +38,27 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
       </div>
 
 
+      <?php
+      if(isset($_SESSION['success'])){
+        ?>
+        <div class="bg-green-800 text-white border-1 rounded px-4 py-2"><?php echo $_SESSION['success']; ?></div>
+        <?php
 
-      <h1>Tasks</h1>
+        unset($_SESSION['success']);
+      }
+
+
+      if(isset($_SESSION['error'])){
+        ?>
+        <div class="bg-red-700 text-white border-1 rounded px-4 py-2"><?php echo $_SESSION['error']; ?></div>
+        
+        <?php
+        unset($_SESSION['error']);
+      }
+      
+      ?>
+
+      
 
 
       <?php
@@ -76,8 +96,14 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
             </div>
             </div>
           <div><a href="edit.php?item=<?php echo $id;?>" class="font-bold text-white bg-blue-400 py-1 px-3 text-xl rounded-xl">Edit</a>
+          <form action="includes/delete.php" method="POST">
+
+          <input type="hidden" name="itemId" value="<?php echo $id; ?>">
           <button
-            class="deleteBtn border-1 rounded-xl bg-[#FB4141] text-white font-semi-bold hover:bg-[#FF9B2F] text-base py-1 px-2 md:text-xl capitalize">Delete</button></div>
+            class="deleteBtn border-1 rounded-xl bg-[#FB4141] text-white font-semi-bold hover:bg-[#FF9B2F] text-base py-1 px-2 md:text-xl capitalize">Delete
+          </button>
+            </form>
+        </div>
         </div>
       </div>
 
@@ -101,7 +127,7 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
   </div>
-  <script src="index.js"></script>
+  <script src="index.js"></scr>
 </body>
 
 </html>
